@@ -10,9 +10,21 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+let numeros = [2, 3, 555, 12];
 
-const average = () => {};
+const average = (input) => {
+  let total = 0;
+  if (input.length === 0) {
+    return undefined;
+  }
+    for (let index = 0; index < input.length; index += 1) {
+    if (typeof input[index] !== 'number') {
+      return undefined;
+    }
+    total += input[index];
+  }
+  return Math.round(total / input.length);
+};
+console.log(average(numeros));
 
 module.exports = average;
-
-// Vamos começar
