@@ -18,10 +18,9 @@
 const createStudent = (pessoa) => {
   const estudante = {
     name: pessoa,
-    feedback: 'Eita pessoa boa!',
+    feedback: () => 'Eita pessoa boa!',
   };
-  console.log(estudante);
-  return typeof estudante.feedback;
+  return estudante;
 };
 console.log(createStudent('Solon, um gênio!'));
 module.exports = createStudent;
